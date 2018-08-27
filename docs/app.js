@@ -20,6 +20,7 @@ const game = document.querySelector('#game'),
       guessBtn = document.querySelector('#guess-btn'),
       guessInput = document.querySelector('#guess-input'),
       message = document.querySelector('.message');
+      finalImage = document.querySelector('result-image');
 
 // Assign UI min and max
 minNum.textContent = min;
@@ -68,6 +69,7 @@ guessBtn.addEventListener('click', function(){
 function gameOver(won, msg){
   let color;
   won === true ? color = 'green' : color = 'red';
+
 
   // Disable input
   guessInput.disabled = true;
